@@ -17,4 +17,4 @@ pluginManagement {
 }
 rootProject.name = 'ExploringMultiPlatform'
 
-include 'ExploringMultiPlatform-common', 'ExploringMultiPlatform-jvm', 'ExploringMultiPlatform-js', 'ExploringMultiPlatform-Android'
+include 'ExploringMultiPlatform-common', 'ExploringMultiPlatform-jvm', 'ExploringMultiPlatform-js', 'ExploringMultiPlatform-Android', 'ExploringMultiPlatform-iOS'

@@ -8,14 +8,11 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     expectedBy project(":ExploringMultiPlatform-common")
-    testCompile "junit:junit:4.12"
-    testCompile "org.jetbrains.kotlin:kotlin-test"
-    testCompile "org.jetbrains.kotlin:kotlin-test-junit"
 }
 
 jar {
     manifest {
-        attributes 'Main-Class': 'demo.multiplat.CommonKt'
+        attributes 'Main-Class': 'demo.multiplat.MainKt'
     }
     from { configurations.compile.collect{ it.isDirectory() ? it : zipTree(it) } }
 }

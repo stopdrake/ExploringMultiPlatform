@@ -1,0 +1,31 @@
+plugins {
+    id "org.jetbrains.kotlin.konan" version "1.3.0-rc-190"
+}
+
+konanArtifacts {
+
+    framework('KMulti', targets: ['iphone_sim', "iphone"]) {
+
+        // Enable multiplatform support for this artifact.
+        enableMultiplatform true
+
+        // Enable compiler optimizations (true/false).
+        enableOptimizations true
+
+        // Enable debugging for binaries generated (true/false).
+        enableDebug true
+
+        // Print all parameters during the build.
+        dumpParameters false
+
+        // Print time of compilation phases (equivalent of the `--time` command line option).
+        measureTime false
+    }
+}
+
+
+    dependencies {
+        expectedBy project(":ExploringMultiPlatform-common")
+    }
+
+

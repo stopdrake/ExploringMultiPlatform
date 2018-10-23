@@ -1,14 +1,12 @@
-package org.kotlin.mpp.mobile
+package demo.multiplat
 
 import platform.UIKit.UIDevice
 
-actual fun platformName(): String {
-
-  return UIDevice.currentDevice.systemName() +
-          " " +
-          UIDevice.currentDevice.systemVersion
+actual class Platform {
+  actual val name: String
+    get() =UIDevice.currentDevice.systemName()
 }
 
-
-
-//https://stackoverflow.com/a/24505884
+actual fun getPlatform(): Platform {
+  return Platform()
+}

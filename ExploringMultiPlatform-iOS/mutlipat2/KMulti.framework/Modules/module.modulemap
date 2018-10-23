@@ -1,0 +1,6 @@
+framework module KMulti {
+    umbrella header "KMulti.h"
+
+    export *
+    module * { export * }
+}
