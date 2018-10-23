@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting</title>
+</head>
+<body>
+
+	<input type="text" id="input" />
+	<button onclick="clicked()">
+		Get Greeting
+	</button>
+
+<script type="text/javascript" src="kotlin.js"></script>
+<script type="text/javascript" src="ExploringMultiPlatform-js.js"></script>
+<script>
+	function clicked() {
+		var el = document.getElementById('input');
+		var multiplat = window['ExploringMultiPlatform-js'].demo.multiplat
+		alert(multiplat.sendGreeting(multiplat.getPlatform(), el.value));
+	}
+</script>
+</body>
+</html>
